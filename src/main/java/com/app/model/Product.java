@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 @Entity
 @Table(name="products")
 public class Product {
@@ -31,7 +32,7 @@ private BigDecimal price;
 @CreationTimestamp
 private Date createdAt;
 
-@CreationTimestamp
+@UpdateTimestamp
 private Date updatedAt;
 
 public long getId() {
